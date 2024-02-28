@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W3e3</title>
+<style>
+  body {
+    background-color: #333333; /* Dark gray color */
+    color: #ffffff; /* Text color for better contrast */
+    font-family: Arial, sans-serif; /* Optional: Adjust font family */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #greeting {
+    margin-bottom: 20px; /* Add some space below the "Welcome" message */
+  }
+  .button-container {
+    margin-top: 20px; /* Add some space above the buttons */
+  }
+  .button-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #8a2be2, #4a90e2); /* Initial gradient from purple to blue */
+    color: white;
+    cursor: pointer;
+    animation: flowGradient 6s infinite;
+    background-size: 200% auto;
+  }
+
+  @keyframes flowGradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+</style>
+<script>
+  // Array of random greeting messages
+  var greetings = [
+    "W3e3 is the best",
+    "Howly Mowly",
+    "Im going to put a child in that animatronic",
+    "...",
+    "Khang likes men",
+    "pls stop throwing honeybuns at homeless people😭",
+"Mason is marvel jesus",
+  ];
+
+  // Function to select a random greeting from the array
+  function getRandomGreeting() {
+    return greetings[Math.floor(Math.random() * greetings.length)];
+  }
+
+  // Function to update the greeting message in the HTML
+  function updateGreeting() {
+    var greetingElement = document.getElementById("randomGreeting");
+    greetingElement.textContent = getRandomGreeting();
+  }
+
+  // Call the updateGreeting function when the page loads
+  window.onload = updateGreeting;
+</script>
+</head>
+<body>
+
+<!-- Static "Welcome" message -->
+<h1 id="welcome">W3e3</h1>
+
+<!-- Dynamic random greeting message -->
+<p id="randomGreeting"></p>
+
+<!-- Buttons -->
+<div class="button-container">
+  <button onclick="window.location.href='file:///C:/Users/Noah's%20Desktop/Downloads/W3e3/games.html">Games</button>
+  <button onclick="window.location.href='https://betagamma2416.w3spaces.com/Temp-P.html'">Proxies</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Display</title>
+    <style>
+        body {
+            background-color: #333333; /* Dark gray color */
+            color: #ffffff; /* Text color for better contrast */
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #homeIcon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .centeredImg {
+            max-width: 30%; /* Adjust the max-width as needed */
+            max-height: 80vh; /* Adjust the max-height as needed */
+            margin: 0 10px; /* Add space between the images */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a id="homeIcon" href="https://betagamma2416.w3spaces.com/index.html" target="_blank"> <!-- Opens the link in a new tab -->
+            <img src="https://i.ibb.co/bsJWFg1/HomeIcon.png" alt="Home Icon">
+        </a>
+
+        <img id="SandBoxels" class="centeredImg" src="https://i.ibb.co/k3G3pyj/Images-3.png" alt="Centered Image">
+    </div>
+
+    <script>
+        document.getElementById("SandBoxels").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevents the default link behavior
+            const url = "https://urban-spork-977gq476vgv6c9p6x-8080.app.github.dev/";
+            openInNewTab(url);
+        });
+
+        
+
+        function openInNewTab(url) {
+            const tab = window.open('about:blank', '_blank');
+            const iframe = tab.document.createElement('iframe');
+            iframe.src = url; // Set the src after creating the iframe
+            const stl = iframe.style;
+            stl.border = stl.outline = 'none';
+            stl.width = '100vw';
+            stl.height = '100vh';
+            stl.position = 'fixed';
+            stl.left = stl.right = stl.top = stl.bottom = '0';
+            tab.document.body.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>
